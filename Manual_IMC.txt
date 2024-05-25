@@ -1,0 +1,16 @@
+
+Bienvenido, este es un manual que explica lo que 
+es el IMC
+
+Indice de Masa Corporal, es una medida utilizada 
+para evaluar el peso corporal de una persona en 
+relación con su altura y ayuda a determinar si una 
+persona tiene un peso saludable.
+
+Es importante tener en cuenta que el IMC es una medida 
+general y no tiene en cuenta otros factores como 
+la composición corporal, el nivel de actividad física o 
+la distribución de la grasa corporal. Por lo tanto, es 
+posible que el IMC no sea una medida precisa para todas 
+las personas y puede requerir una evaluación más completa por
+parte de un profesional de la salud.

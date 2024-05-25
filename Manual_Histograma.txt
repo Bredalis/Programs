@@ -1,0 +1,10 @@
+
+Explicacion de Histograma
+
+Un histograma es como una barra o gráfico
+que muestra cuántas veces ocurre algo. 
+Imagina una tabla con barras. Cada 
+barra representa cuántas veces algo sucede, 
+como la cantidad de veces que Lucas hace ciertas 
+actividades como en este ejemplo. Así, puedes ver 
+rápidamente qué cosas son más comunes o menos comunes.
