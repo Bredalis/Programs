@@ -3,12 +3,8 @@ import sqlite3 as sqlite
 import pandas as pd
 
 class ClavesSeguras:
-
-	def conectar_bbdd(self):
-		self.url = "Contraseñas_Seguras.db"
-		self.bbdd = sqlite.connect(self.url)
- 
-	def crear_cursor(self):
+	def __init__(self):
+		self.bbdd = sqlite.connect("Contraseñas_Seguras.db")
 		self.cursor = self.bbdd.cursor()
 
 	def ejecucion(self):
@@ -30,8 +26,6 @@ class ClavesSeguras:
 		self.bbdd.close()
 
 claves = ClavesSeguras()
-claves.conectar_bbdd()
-claves.crear_cursor()
 claves.ejecucion()
 claves.crear_df()
 claves.borrar_columna()

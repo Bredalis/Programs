@@ -81,7 +81,6 @@ def abrir_imagen():
                 self.herencia.wait_window(clase.x)
 
         if __name__ == "__main__":
-
             clase = Registro(ventana)
 
     except Exception: 

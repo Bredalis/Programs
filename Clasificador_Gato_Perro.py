@@ -12,8 +12,7 @@ metodo = MetodosParaModelos()
 
 # Obtener datos
 
-url = "Dogs_And_Cats.csv"
-df = pd.read_csv(url)
+df = pd.read_csv("Dogs_And_Cats.csv")
 
 print(df)
 print(df.shape)
@@ -24,7 +23,7 @@ print(df["animals"][1])
 
 lista_categorica = ["animals", "labels"]
 
-# (One-Hot-Encoder)
+# One-Hot-Encoder
 
 for categorico in lista_categorica:
 

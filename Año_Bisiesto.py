@@ -3,7 +3,6 @@
 # un año es bisiesto o no 
 
 try:
-
 	año = int(input("Ingrese el año: "))
 
 	if año % 4 == 0:
