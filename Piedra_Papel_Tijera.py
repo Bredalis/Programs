@@ -6,7 +6,6 @@ import random
 # Obtener eleccion del usuario
 
 def obtener_opcion_usuario():
-	
 	usuario = input("Elije una (piedra, papel o tijera): ")
 
 	while usuario.lower() not in ["piedra", "papel", "tijera"]:
@@ -29,15 +28,18 @@ def obtener_opcion_maquina():
 
 def determinar_resultado(usuario, maquina):
 
-	if usuario == maquina:
-		return "Empate"
+	condiciones = [
+		usuario == "piedra" and maquina == "tijera", 
+		usuario == "papel" and maquina == "piedra", 
+		usuario == "tijera" and maquina == "papel"]
 
-	elif (usuario == "piedra" and maquina == "tijera") or (usuario == "papel" and maquina == "piedra") or (usuario == "tijera" and maquina == "papel"):
+	if usuario != maquina:
+		return "Perdiste :("
 
+	if (condiciones[0]) or (condiciones[1]) or (condiciones[2]):
 		return "Ganaste"
 
-	else:
-		return "Perdiste :("
+	return "Empate"
 
 # Inicio del juego
 

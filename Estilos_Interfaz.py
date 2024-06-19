@@ -19,9 +19,6 @@ for i in range(0, len(datos)):
 	lista_letras.append(datos[i][1])
 	lista_cursor.append(datos[i][2])
 
-print(lista_letras)
-print(lista_cursor)
-
 # Crear un df con esas listas
 
 df_estilos = pd.DataFrame({

@@ -23,7 +23,7 @@ def cifrar():
 
 	# Cifrar
 
-	if(booleano):
+	if booleano:
 
 		entry_texto.delete(0, tk.END)
 		entry_texto.insert(0, cifrado)

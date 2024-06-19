@@ -42,10 +42,10 @@ def personaje_ahorcado():
 
 def seleccionar_palabra():
 
-	Categoria = input("Ingrese el tipo de categoria entre (Comida, Sentimientos, Paises, Nombres, Cosas, Animales, Artistas):")
+	categoria = input("Ingrese el tipo de categoria entre (Comida, Sentimientos, Paises, Nombres, Cosas, Animales, Artistas): ").capitalize()
 
-	print(f"La categoria es: {Categoria}")
-	palabra = random.choice(categorias[Categoria])
+	print(f"La categoria es: {categoria}")
+	palabra = random.choice(categorias[categoria])
 
 	return palabra
 
@@ -95,11 +95,11 @@ def jugar_ahorcado():
 
 			print("Incorrecto. intentos {}/{}".format(intentos, intentos_maximos))
 
-	if "_" not in tablero:
-		print("Ganaste la palabra era:", palabra)
-
-	else:
+	if "_" in tablero:
 		print("Perdiste :(")
 		personaje_ahorcado()
+		return
+
+	print("Ganaste, la palabra era:", palabra)
 
 jugar_ahorcado()

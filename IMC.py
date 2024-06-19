@@ -38,13 +38,13 @@ def imc():
 	if resultado < 18.5:
 		etiqueta_resultado.config(text = f"IMC: {resultado}, Peso Bajo")
 
-	elif resultado >= 18.5 and resultado <= 24.9:
+	if resultado >= 18.5 and resultado <= 24.9:
 		etiqueta_resultado.config(text = f"IMC: {resultado}, Peso Normal")
 
-	elif resultado >= 25 and resultado <= 29.9:
+	if resultado >= 25 and resultado <= 29.9:
 		etiqueta_resultado.config(text = f"IMC: {resultado}, Sobrepeso")
 
-	elif resultado >= 30:
+	if resultado >= 30:
 		etiqueta_resultado.config(text = f"IMC: {resultado}, Obesidad")
 
 	conectar_bbdd()

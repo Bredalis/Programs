@@ -25,7 +25,8 @@ nombres = [
 
 	"lucas", "perla", "kevin", "juanmy", "yulissa", "jonathan", "emghell"
 	"miguel", "leo", "marisol", "margarita", "pedro", "juan", "jose", 
-	"josefa", "maria", "loraine", "mozart", "matias"
+	"josefa", "maria", "loraine", "mozart", "matias", "joel", "steve",
+	"lukas", "alejandro", "alex"
 ]
 
 cosas = [

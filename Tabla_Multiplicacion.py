@@ -1,26 +1,11 @@
-"""
-Programa que muestra 
-la tabla del 1 - 100 
-del numero ingresado 
-por el usuario
-"""
 
-print("Tabla de Multiplicacion")
+print("\nTabla de Multiplicacion")
 
-while(True):
+def tablas_muplicacion(numero):
+	print(f"\n{"Tabla"} {numero}")
 
-	# Obtener solo numero
+	for i in range(0, 11):
+		print(f"{i} X {numero} = {i * numero}")
 
-	try:
-		factor_1 = int(input("Introduce el numero para la tabla: "))
-
-		# Bucle que crea la tabla
-
-		for factor_2 in range(1, 101):
-			multiplicacion = factor_1 * factor_2
-			print(f"{factor_1} X {factor_2} = {multiplicacion}")
-
-		break
-
-	except ValueError:
-		print("Solo numeros")
+for i in range(0, 11):
+	tablas_muplicacion(i)

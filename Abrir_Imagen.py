@@ -23,7 +23,6 @@ def abrir_imagen():
             filetypes = (("Icon", "*.png"), ("Icon", "*.ico"), ("Icon", "*.jpg")))
 
         img = Image.open(folder)
-
         foto = ImageTk.PhotoImage(img)
 
         etiqueta = tk.Label(ventana, image = foto)
