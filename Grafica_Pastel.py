@@ -1,6 +1,7 @@
 
-class Pastel:
+import matplotlib.pyplot as plt
 
+class Pastel:
 	def __init__(self):
 
 		self.lista_nombres = []
@@ -18,6 +19,9 @@ class Pastel:
 				self.lista_nombres.append(self.nombres)
 				self.lista_cantidades.append(self.cantidades)
 
+			except Exception as e:
+				print(f"Error: {e}")
+
 			finally:
 				self.pregunta = input("¿Quieres seguir ingresando integrantes?: ")
 
@@ -30,9 +34,6 @@ class Pastel:
 
 if __name__ == "__main__":
 
-	import matplotlib.pyplot as plt
-
 	pastel = Pastel()
-
 	pastel.ejecucion()
 	pastel.grafica()

@@ -7,11 +7,65 @@ ventana.geometry("245x245")
 ventana.title("CALCULATOR")
 ventana.resizable(0, 0)
 ventana.config(bg = "white")
-
 ventana.iconbitmap("Calculadora.ico")
 
 contenido = open("Manual.txt").read()
 exec(contenido)
+
+# Cerrar la ventana 
+
+class Cerrar:
+    def __init__(self, herencia):
+
+        self.x = tk.Toplevel(herencia)
+        self.x.title("Salir")
+        self.x.geometry("90x70")
+
+        self.herencia = herencia
+        
+        tk.Label(self.x, text = "¿Quieres cambiar de color?").pack(pady = 5)
+
+        tk.Button(self.x, text = "Si", 
+            activebackground = "skyblue", command = self.salir).place(x = 30, y = 30)
+
+        tk.Button(self.x, text = "No", 
+            activebackground = "skyblue", command = self.color).place(x = 60, y = 30)
+
+    def color(self):
+        
+    	global condicion
+
+    	if condicion:
+
+    		ventana.config(bg = "black")
+    		mi_entry.config(bg = "black")
+    		mi_entry.config(fg = "white")
+
+    		condicion = False
+
+    	else:
+
+    		ventana.config(bg = "white")
+    		mi_entry.config(bg = "white")
+    		mi_entry.config(fg = "black")
+
+    		condicion = True    	
+ 
+    def salir(self):
+
+        self.x.destroy()
+        self.herencia.destroy()
+
+class Calculadora():
+    def __init__(self, herencia):
+
+        self.herencia = herencia
+        self.herencia.protocol("WM_DELETE_WINDOW", self.al_cerrar)
+
+    def al_cerrar(self):
+
+        clase = cerrar(ventana)
+        self.herencia.wait_window(clase.x)
 
 def clean():
 	mi_entry.delete(0, tk.END)
@@ -113,37 +167,29 @@ def resultado():
 	mi_entry.delete(0, tk.END)
 
 	if operacion == "+" :
-
 		mi_entry.insert(0, numero_1 + numero_2)
 
 	if operacion == "-" :
-
 		mi_entry.insert(0, numero_1 - numero_2)
 
 	if operacion == "*" :
-
 		mi_entry.insert(0, numero_1 * numero_2)
 
 	if operacion == "^" :
-		
 		mi_entry.insert(0, numero_1 ** numero_2)
 
 	if operacion == "B":
-
 		mi_entry.insert(0, bin(numero_1)[2:])
 
 	if operacion == "/":
 
 		try:
-
 			mi_entry.insert(0, numero_1 / numero_2)
 
 		except ZeroDivisionError:
-
 			mi_entry.insert(0, "Error")
 
 	if operacion == "√":
-
 		mi_entry.insert(0, math.sqrt(numero_1))
 
 condicion = True
@@ -181,67 +227,6 @@ tk.Button(ventana, text = "√", bg = "#A569BD", cursor  = "hand2", width = 5, a
 tk.Button(ventana, text = "⌦", bg = "#A569BD", cursor  = "hand2", width = 5, activebackground = "pink", command = clean).grid(column = 3, row = 5, pady = 10)
 tk.Button(ventana, text = "^", bg = "#A569BD", cursor = "hand2", width = 5, activebackground = "pink", command = potencia).grid(column = 4, row = 5, pady = 10)
 
-class Cerrar():
-
-    def __init__(self, herencia):
-
-        self.x = tk.Toplevel(herencia)
-        self.x.title("Salir")
-
-        self.herencia = herencia
-        
-        tk.Label(self.x, text = "¿Quieres cambiar de color?").grid(row = 0, column = 0, columnspan = 2)
-
-        self.si = tk.Button(self.x, text = "Si", activebackground = "pink", command = self.color)
-        self.si.grid(row = 1, column = 0, padx = 5, pady = 5)
-
-        self.no = tk.Button(self.x, text = "No", activebackground = "pink", command = self.salir)        
-        self.no.grid(row = 1, column = 1, padx = 5, pady = 5)
-
-    def color(self):
-        
-
-    	global condicion
-
-    	if condicion:
-
-    		ventana.config(bg = "black")
-
-    		mi_entry.config(bg = "black")
-    		mi_entry.config(fg = "white")
-
-    		condicion = False
-
-    	else:
-
-    		ventana.config(bg = "white")
-    		mi_entry.config(bg = "white")
-    		mi_entry.config(fg = "black")
-
-    		condicion = True    	
-
-    def salir(self):
-
-        self.x.destroy()
-        self.herencia.destroy()
-
-class Calculadora():
-
-    def __init__(self, herencia):
-
-        self.herencia = herencia
-        self.herencia.protocol("WM_DELETE_WINDOW", self.Al_Cerrar)
-
-    def Al_Cerrar(self):
-
-        clase = Cerrar(ventana)
-
-        self.herencia.wait_window(clase.x)
-
-if __name__ == "__main__":
-
-    clase = Calculadora(ventana)
-
+clase = Calculadora(ventana)
 manual("Manual_Calculadora.txt")
-
 ventana.mainloop()
