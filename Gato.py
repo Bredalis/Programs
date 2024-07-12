@@ -3,24 +3,27 @@ import matplotlib.pyplot as plt
 
 fig, grafica = plt.subplots(figsize = (7, 4))
 
+def crear_lineas(columna_1, columna_2):
+	plt.plot(columna_1, columna_2)
+
 # Cabeza
 
-plt.plot([4, 6], [6, 6])
+crear_lineas([4, 6], [6, 6])
 
 # Oreja derecha
 
-plt.plot([4, 3.5], [6, 7])
-plt.plot([3, 3.5], [6, 7])
+crear_lineas([4, 3.5], [6, 7])
+crear_lineas([3, 3.5], [6, 7])
 
 # Oreja izquierda
 
-plt.plot([6, 6.5], [6, 7])
-plt.plot([6.5, 7], [7, 6])
+crear_lineas([6, 6.5], [6, 7])
+crear_lineas([6.5, 7], [7, 6])
 
 # Barbilla
 
-plt.plot([3, 5], [6, 2])
-plt.plot([7, 5], [6, 2])
+crear_lineas([3, 5], [6, 2])
+crear_lineas([7, 5], [6, 2])
 
 # Ojos y nariz
 
@@ -29,15 +32,15 @@ plt.scatter([5], [4], s = 100)
 
 # Bigotes derechos
 
-plt.plot([5, 4.3], [4, 4.3])
-plt.plot([5, 4.3], [4, 4])
-plt.plot([5, 4.3], [4, 3.7])
+crear_lineas([5, 4.3], [4, 4.3])
+crear_lineas([5, 4.3], [4, 4])
+crear_lineas([5, 4.3], [4, 3.7])
 
 # Bigotes izquierdos
 
-plt.plot([5, 5.7], [4, 4.3])
-plt.plot([5, 5.7], [4, 4])
-plt.plot([5, 5.7], [4, 3.7])
+crear_lineas([5, 5.7], [4, 4.3])
+crear_lineas([5, 5.7], [4, 4])
+crear_lineas([5, 5.7], [4, 3.7])
 
 grafica.set_yticks(range(1, 9))
 grafica.set_xticks(range(1, 9))

@@ -33,8 +33,7 @@ class Contactos:
 
 print("Contactos:\n")
 
-url = "Contactos.db"
-bbdd = Contactos(url)
+bbdd = Contactos("Contactos.db")
 bbdd.instruccion()
 bbdd.obtener_datos()
 bbdd.crear_df()

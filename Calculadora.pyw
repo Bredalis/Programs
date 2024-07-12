@@ -19,17 +19,18 @@ class Cerrar:
 
         self.x = tk.Toplevel(herencia)
         self.x.title("Salir")
-        self.x.geometry("90x70")
+        self.x.geometry("200x100")
+        self.x.resizable(0, 0)
 
         self.herencia = herencia
         
-        tk.Label(self.x, text = "¿Quieres cambiar de color?").pack(pady = 5)
+        tk.Label(self.x, text = "¿Quieres cambiar de \ncolor?").pack(pady = 5)
 
         tk.Button(self.x, text = "Si", 
-            activebackground = "skyblue", command = self.salir).place(x = 30, y = 30)
+            activebackground = "skyblue", command = self.color).place(x = 60, y = 50)
 
         tk.Button(self.x, text = "No", 
-            activebackground = "skyblue", command = self.color).place(x = 60, y = 30)
+            activebackground = "skyblue", command = self.salir).place(x = 100, y = 50)
 
     def color(self):
         
@@ -64,18 +65,18 @@ class Calculadora():
 
     def al_cerrar(self):
 
-        clase = cerrar(ventana)
+        clase = Cerrar(ventana)
         self.herencia.wait_window(clase.x)
 
-def clean():
+def limpiar():
 	mi_entry.delete(0, tk.END)
 
 def reclick(valor):
 	
-	Anterior = mi_entry.get()
+	anterior = mi_entry.get()
 
 	mi_entry.delete(0, tk.END)
-	mi_entry.insert(0, str(Anterior + str(valor)))
+	mi_entry.insert(0, str(anterior + str(valor)))
 
 def binario():
 
@@ -87,31 +88,7 @@ def binario():
 
 	operacion = "B"
 
-def suma():
-
-    global numero_1
-    global operacion
-
-    numero_1 = mi_entry.get()
-    numero_1 = float(numero_1)
-
-    mi_entry.delete(0, tk.END)
-
-    operacion = "+"
-
-def resta():
-
-	global numero_1 
-	global operacion
-
-	numero_1 = mi_entry.get()
-	numero_1 = float(numero_1)
-
-	mi_entry.delete(0, tk.END)
-
-	operacion = "-"
-
-def multiplicacion():
+def operaciones_aritmeticas(signo_operacion):
 
 	global numero_1
 	global operacion
@@ -120,42 +97,7 @@ def multiplicacion():
 	numero_1 = float(numero_1)
 
 	mi_entry.delete(0, tk.END)
-
-	operacion = "*"
-
-def division():
-
-	global numero_1
-	global operacion
-
-	numero_1 = mi_entry.get()
-	numero_1 = float(numero_1)
-
-	mi_entry.delete(0, tk.END)
-
-	operacion = "/"
-
-def potencia():
-
-	global numero_1
-	global operacion
-
-	numero_1 = mi_entry.get()
-	numero_1 = float(numero_1)
-
-	mi_entry.delete(0, tk.END)
-
-	operacion = "^"
-
-def radicacion():
-
-	global numero_1
-	global operacion
-
-	numero_1 = mi_entry.get()
-	numero_1 = int(numero_1)
-
-	operacion = "√"
+	operacion = signo_operacion
 	
 def resultado():
 
@@ -201,31 +143,37 @@ operacion = ""
 mi_entry = tk.Entry(ventana, textvariable = texto, width = 40, justify = "right", bg = "white")
 mi_entry.grid(column = 0, row = 0, columnspan = 5)
 
-tk.Button(ventana, text = "1", bg = "#A569BD", cursor = "hand2", width = 5, activebackground = "pink", command = lambda: reclick(1)).grid(column = 1, row = 1, pady = 10)
-tk.Button(ventana, text = "2", bg = "#A569BD", cursor = "hand2", width = 5, activebackground = "pink", command = lambda: reclick(2)).grid(column = 2, row = 1, pady = 10)
-tk.Button(ventana, text = "3", bg = "#A569BD", cursor = "hand2", width = 5, activebackground = "pink", command = lambda: reclick(3)).grid(column = 3, row = 1, pady = 10)
+def crear_boton(texto, funcion, colum, fila):
 
-tk.Button(ventana, text = "4", bg = "#A569BD", cursor = "hand2", width = 5, activebackground = "pink", command = lambda: reclick(4)).grid(column = 1, row = 2, pady = 10)
-tk.Button(ventana, text = "5", bg = "#A569BD", cursor = "hand2", width = 5, activebackground = "pink", command = lambda: reclick(5)).grid(column = 2, row = 2, pady = 10)
-tk.Button(ventana, text = "6", bg = "#A569BD", cursor = "hand2", width = 5, activebackground = "pink", command = lambda: reclick(6)).grid(column = 3, row = 2, pady = 10)
+	tk.Button(ventana, text = texto, bg = "#A569BD", cursor = "hand2", width = 5, 
+		activebackground = "pink", 
+		command = funcion).grid(column = colum, row = fila, pady = 10)
 
-tk.Button(ventana, text = "7", bg = "#A569BD", cursor = "hand2", width = 5, activebackground = "pink", command = lambda: reclick(7)).grid(column = 1, row = 3, pady = 10)
-tk.Button(ventana, text = "8", bg = "#A569BD", cursor = "hand2", width = 5, activebackground = "pink", command = lambda: reclick(8)).grid(column = 2, row = 3, pady = 10)
-tk.Button(ventana, text = "9", bg = "#A569BD", cursor = "hand2", width = 5, activebackground = "pink", command = lambda: reclick(9)).grid(column = 3, row = 3, pady = 10)
+# Botones numericos
 
-tk.Button(ventana, text = "0", bg = "#A569BD", cursor  = "hand2", width = 5, activebackground = "pink", command = lambda: reclick(0)).grid (column = 1, row = 4, pady = 10)
-tk.Button(ventana, text = "+", bg = "#A569BD", cursor = "hand2", width = 5, activebackground = "pink", command = suma).grid(column = 4, row = 1, pady = 10)
-tk.Button(ventana, text = "x", bg = "#A569BD", cursor = "hand2", width = 5, activebackground = "pink",command = multiplicacion).grid(column = 4, row = 2, pady = 10)
+crear_boton("1", lambda: reclick(1), 1, 1)
+crear_boton("2", lambda: reclick(2), 2, 1)
+crear_boton("3", lambda: reclick(3), 3, 1)
+crear_boton("4", lambda: reclick(4), 1, 2)
+crear_boton("5", lambda: reclick(5), 2, 2)
+crear_boton("6", lambda: reclick(6), 3, 2)
+crear_boton("7", lambda: reclick(7), 1, 3)
+crear_boton("8", lambda: reclick(8), 2, 3)
+crear_boton("9", lambda: reclick(9), 3, 3)
+crear_boton("0", lambda: reclick(0), 1, 4)
 
-tk.Button(ventana, text = "÷", bg = "#A569BD", cursor = "hand2", width = 5, activebackground = "pink", command = division).grid(column = 3, row = 4, pady = 10)
-tk.Button(ventana, text = "-", bg = "#A569BD", cursor = "hand2", width = 5, activebackground = "pink", command = resta).grid(column = 4, row = 3, pady = 10)
-tk.Button(ventana, text = "π", bg = "#A569BD", cursor  = "hand2", width = 5, activebackground = "pink", command = lambda: reclick(math.pi)).grid(column = 2, row = 4, pady = 10)
-tk.Button(ventana, text = "=", bg = "#A569BD", cursor = "hand2", width = 5, activebackground = "pink", command = resultado).grid(column = 4, row = 4, pady = 10)
+# Botones de simbolos
 
-tk.Button(ventana, text = "B", bg = "#A569BD", cursor = "hand2", width = 5, activebackground = "pink", command = binario).grid(column = 1, row = 5, pady = 10)
-tk.Button(ventana, text = "√", bg = "#A569BD", cursor  = "hand2", width = 5, activebackground = "pink", command = radicacion).grid(column = 2, row = 5, pady = 10)
-tk.Button(ventana, text = "⌦", bg = "#A569BD", cursor  = "hand2", width = 5, activebackground = "pink", command = clean).grid(column = 3, row = 5, pady = 10)
-tk.Button(ventana, text = "^", bg = "#A569BD", cursor = "hand2", width = 5, activebackground = "pink", command = potencia).grid(column = 4, row = 5, pady = 10)
+crear_boton("+", lambda: operaciones_aritmeticas("+"), 4, 1)
+crear_boton("X", lambda: operaciones_aritmeticas("*"), 4, 2)
+crear_boton("÷", lambda: operaciones_aritmeticas("/"), 3, 4)
+crear_boton("-", lambda: operaciones_aritmeticas("-"), 4, 3)
+crear_boton("π", lambda: reclick(math.pi), 2, 4)
+crear_boton("=", resultado, 4, 4)
+crear_boton("B", binario, 1, 5)
+crear_boton("√", lambda: operaciones_aritmeticas("√"), 2, 5)
+crear_boton("⌦", limpiar, 3, 5)
+crear_boton("^", lambda: operaciones_aritmeticas("^"), 4, 5)
 
 clase = Calculadora(ventana)
 manual("Manual_Calculadora.txt")

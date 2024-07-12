@@ -1,5 +1,5 @@
 
-# Algoritmo para debucir si 
+# Algoritmo para deducir si 
 # un año es bisiesto o no 
 
 try:
