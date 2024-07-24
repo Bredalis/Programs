@@ -8,15 +8,12 @@ class ClavesSeguras:
 		self.cursor = self.bbdd.cursor()
 
 	def ejecucion(self):
-		self.cursor.execute("SELECT * FROM  Claves_Seguras")
+		self.cursor.execute("SELECT Entidad, Claves FROM  Claves_Seguras")
 
 	def crear_df(self):
 		self.datos = self.cursor.fetchall()
 		self.df = pd.DataFrame(self.datos, 
-			columns = ["id", "Entidades",  "Claves"])
-
-	def borrar_columna(self):
-		self.df = self.df.drop("id", axis = 1)
+			columns = ["Entidades",  "Claves"])
 
 	def informacion(self):
 		print(self.df)
@@ -28,5 +25,4 @@ class ClavesSeguras:
 claves = ClavesSeguras()
 claves.ejecucion()
 claves.crear_df()
-claves.borrar_columna()
 claves.informacion()

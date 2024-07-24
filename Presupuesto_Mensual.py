@@ -11,7 +11,7 @@ bbdd_presupuesto = sqlite.connect("Presupuesto.db")
 
 # Obtener todas las columnas de las tablas
 
-presupuesto = pd.read_sql("SELECT * FROM Monthly", bbdd_presupuesto)
+presupuesto = pd.read_sql("SELECT MONTH, SPENDING, INCOME FROM Monthly", bbdd_presupuesto)
 print(f"Presupuesto: \n{presupuesto}")
 
 # Mostrar gastos mensuales
