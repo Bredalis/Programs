@@ -7,9 +7,9 @@ ventana.geometry("245x245")
 ventana.title("CALCULATOR")
 ventana.resizable(0, 0)
 ventana.config(bg = "white")
-ventana.iconbitmap("Calculadora.ico")
+ventana.iconbitmap("../IMG/Calculadora.ico")
 
-contenido = open("Manual.txt").read()
+contenido = open("../TXT/Manual.txt").read()
 exec(contenido)
 
 # Cerrar la ventana 
@@ -176,5 +176,5 @@ crear_boton("⌦", limpiar, 3, 5)
 crear_boton("^", lambda: operaciones_aritmeticas("^"), 4, 5)
 
 clase = Calculadora(ventana)
-manual("Manual_Calculadora.txt")
+manual("../TXT/Manual_Calculadora.txt")
 ventana.mainloop()

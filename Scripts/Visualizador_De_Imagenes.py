@@ -10,7 +10,7 @@ def visualizador(url):
 	interfaz = tk.Tk()
 	interfaz.resizable(0, 0)
 	interfaz.title("Imagenes")
-	interfaz.iconbitmap("Imagen.ico")
+	interfaz.iconbitmap("../IMG/Imagen.ico")
 	
 	foto = Image.open(url)
 	img = ImageTk.PhotoImage(foto)

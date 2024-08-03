@@ -26,7 +26,7 @@ class Contactos:
 
 print("Contactos:\n")
 
-bbdd = Contactos("Contactos.db")
+bbdd = Contactos("../BBDD/Contactos.db")
 bbdd.instruccion()
 bbdd.obtener_datos()
 bbdd.crear_df()

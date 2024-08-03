@@ -5,7 +5,7 @@ ventana = tk.Tk()
 ventana.title("Cifrado de Texto")
 ventana.geometry("400x180")
 ventana.resizable(0, 0)
-ventana.iconbitmap("Python.ico")
+ventana.iconbitmap("../IMG/Python.ico")
 
 # Cifrar y decifrar
 

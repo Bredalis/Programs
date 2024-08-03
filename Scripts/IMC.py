@@ -3,12 +3,12 @@ import tkinter as tk
 import sqlite3 as sqlite
 from math import floor
 
-url = "Salud_Fisica.ico"
+url = "../IMG/Salud_Fisica.ico"
 
-contenido = open("Manual.txt").read()
+contenido = open("../TXT/Manual.txt").read()
 exec(contenido)
 
-manual("Manual_IMC.txt", url)
+manual("../TXT/Manual_IMC.txt", url)
 
 ventana = tk.Tk()
 ventana.title("IMC")
@@ -18,7 +18,7 @@ ventana.config(bg = "#D6EAF8")
 ventana.iconbitmap(url)
 
 def conectar_bbdd():
-	bbdd = sqlite.connect("Salud_Fisica.db")
+	bbdd = sqlite.connect("../BBDD/Salud_Fisica.db")
 	cursor = bbdd.cursor()
 
 	instruccion = f"INSERT INTO IMC(Nombre, Peso, Altura, Salud_Fisica) VALUES('{nombre.get()}', '{peso.get()}', '{altura.get()}', '{etiqueta_resultado.cget("text")}');"

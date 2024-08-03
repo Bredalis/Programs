@@ -10,7 +10,7 @@ ventana.resizable(0, 0)
 ventana.config(bg = "pink")
 ventana.geometry("340x310")
 
-ventana.iconbitmap("Registro_2.ico")
+ventana.iconbitmap("../IMG/Registro_2.ico")
 
 # Guardar datos en la bbdd
 
@@ -26,7 +26,7 @@ def limpiar_datos(contenedores):
 
 def guardar_datos(contenedores):
 
-	bbdd = sqlite.connect("Formulario.db")
+	bbdd = sqlite.connect("../BBDD/Formulario.db")
 	cursor = bbdd.cursor()
 	instruccion = f"INSERT INTO Formulario(Nombre, Edad, Hobby) VALUES('{nombre.get()}', {edad.get()}, '{hobby.get()}')"
 	cursor.execute(instruccion)

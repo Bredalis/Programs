@@ -17,7 +17,7 @@ class ReproductorDeMusica:
 		self.interfaz.geometry("210x100")
 		self.interfaz.resizable(0,0)
 		self.interfaz.config(bg = "#edd269")
-		self.interfaz.iconbitmap("Playlists.ico")
+		self.interfaz.iconbitmap("../IMG/Playlists.ico")
 
 		self.playlist = [] 
 

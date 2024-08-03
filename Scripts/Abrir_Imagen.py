@@ -5,14 +5,14 @@ import tkinter as tk
 from PIL import Image, ImageTk
 from tkinter import filedialog
 
-contenido = open("Manual.txt", "r").read()
+contenido = open("../TXT/Manual.txt", "r").read()
 exec(contenido)
-manual("Manual_Abrir_Imagen.txt")
+manual("../TXT/Manual_Abrir_Imagen.txt")
 
 ventana = tk.Tk()
 ventana.title("Imagen")
 ventana.resizable(0, 0)
-ventana.iconbitmap("Camara_2.ico")
+ventana.iconbitmap("../IMG/Camara_2.ico")
 
 foto = ""
 ventana_fondo = tk.Label(ventana)

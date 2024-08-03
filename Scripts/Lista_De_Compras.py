@@ -12,7 +12,7 @@ ventana = tk.Tk()
 ventana.title("Lista De Compras")
 ventana.geometry("500x430")
 ventana.resizable(0, 0)
-ventana.iconbitmap("Compras.ico")
+ventana.iconbitmap("../IMG/Compras.ico")
 
 ttk.Label(ventana, text = "Lista De Compras", font = ("Verdana", 15)).pack(pady = 30)
 

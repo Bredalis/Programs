@@ -6,7 +6,7 @@ window = tk.Tk()
 window.title("CLOCK")
 window.resizable(0,0)
 window.geometry("450x250")
-window.iconbitmap("Reloj.ico")
+window.iconbitmap("../IMG/Reloj.ico")
 
 window.columnconfigure(0, weight = 15)
 window.rowconfigure(0, weight = 15)

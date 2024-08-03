@@ -4,7 +4,7 @@ import pandas as pd
 
 class ClavesSeguras:
 	def __init__(self):
-		self.bbdd = sqlite.connect("Contraseñas_Seguras.db")
+		self.bbdd = sqlite.connect("../BBDD/Contraseñas_Seguras.db")
 		self.cursor = self.bbdd.cursor()
 
 	def ejecucion(self):

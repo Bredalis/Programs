@@ -8,7 +8,7 @@ class ListaDeCanciones():
 	def __init__(self, tipo):
 
 		self.lista = []
-		self.bbdd = sqlite.connect("Songs.db")
+		self.bbdd = sqlite.connect("../BBDD/Songs.db")
 		self.cursor = self.bbdd.cursor()
 		self.tipo = tipo
 

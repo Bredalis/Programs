@@ -10,7 +10,7 @@ interfaz = tk.Tk()
 interfaz.title("Temporizador")
 interfaz.geometry("245x230")
 interfaz.resizable(0, 0)
-interfaz.iconbitmap("Reloj.ico")
+interfaz.iconbitmap("../IMG/Reloj.ico")
 
 # Funcion temporizadora
 
@@ -36,7 +36,7 @@ def sonido():
 
 	pygame.init()
 
-	url = pygame.mixer.Sound("Campana.mp3")
+	url = pygame.mixer.Sound("../Campana.mp3")
 	pygame.mixer.Sound.play(url, 5)
 
 # Funcion para repetir la temporizacion
@@ -50,7 +50,7 @@ repetir(cantidad)
 
 # Imagen
 
-url = Image.open("Reloj.ico")
+url = Image.open("../IMG/Reloj.ico")
 img = ImageTk.PhotoImage(url)
 
 tk.Label(interfaz, image = img).pack() 

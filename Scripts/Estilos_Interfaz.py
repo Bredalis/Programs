@@ -4,7 +4,7 @@
 import sqlite3 as sqlite
 import pandas as pd
 
-bbdd = sqlite.connect("Estilos_Interfaz.db")
+bbdd = sqlite.connect("../BBDD/Estilos_Interfaz.db")
 cursor = bbdd.cursor()
 
 cursor.execute(f"SELECT * FROM Estilos")

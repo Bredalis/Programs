@@ -7,14 +7,14 @@ import random
 
 # Lectura de datos
 
-contenido = open("Manual.txt", "r").read()
+contenido = open("../TXT/Manual.txt", "r").read()
 exec(contenido)
 
-manual("Manual_Ahorcado.txt")
+manual("../TXT/Manual_Ahorcado.txt")
 
 # Categorias de palabras
 
-contenido = open("Categorias_Ahorcado.txt", "r").read()
+contenido = open("../TXT/Categorias_Ahorcado.txt", "r").read()
 exec(contenido)
 
 categorias = {
@@ -31,7 +31,7 @@ def personaje_ahorcado():
 	ventana.title("Ahorcado")
 	ventana.resizable(0, 0)
 
-	ruta = Image.open("Ahorcado.ico")
+	ruta = Image.open("../IMG/Ahorcado.ico")
 	
 	imagen = ImageTk.PhotoImage(ruta)
 
