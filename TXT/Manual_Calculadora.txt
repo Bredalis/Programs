@@ -1,12 +1,15 @@
 
-Este manual trata sobre el programa de nombre Calculadora.py
+Manual de Usuario para el Programa "Calculadora.py"
 
-El programa es una calculadora la cual resuelve 8 operaciones matematicas
-como Suma, Resta, Multiplicacion, Division, Potenciacion, Radicacion y convertir
-a lenguaje Binario.
+Este manual trata sobre el programa llamado Calculadora.py.
 
-Es dinamico, tiene una regulacion de division por cero y tiene un ajuste 
-de cambio de colores.
+El programa es una calculadora que resuelve 8 operaciones 
+matemáticas, incluyendo Suma, Resta, Multiplicación, División, 
+Potenciación, Radicación, y conversión a lenguaje Binario.
 
-Pero, presenta fallas como no poder poner mas de 2 numeros por 
-operacion o poner primero los signos. Vamos a mejorar.
+Es dinámico, cuenta con una regulación para evitar la división por 
+cero, y ofrece un ajuste para cambiar colores.
+
+Sin embargo, presenta algunas limitaciones, como la imposibilidad de 
+ingresar más de 2 números por operación o de colocar los signos antes 
+de los números. Vamos a trabajar para mejorar esto.

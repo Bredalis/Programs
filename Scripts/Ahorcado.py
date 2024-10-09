@@ -1,5 +1,5 @@
 
-# Librerias
+# Librerías
 
 from PIL import Image, ImageTk
 import tkinter as tk
@@ -42,12 +42,16 @@ def personaje_ahorcado():
 
 def seleccionar_palabra():
 
-	categoria = input("Ingrese el tipo de categoria entre (Comida, Sentimientos, Paises, Nombres, Cosas, Animales, Artistas): ").capitalize()
+	try:
+		categoria = str(input("Ingrese el tipo de categoria entre (Comida, Sentimientos, Paises, Nombres, Cosas, Animales, Artistas): ")).capitalize()
 
-	print(f"La categoria es: {categoria}")
-	palabra = random.choice(categorias[categoria])
+		print(f"La categoria es: {categoria}")
+		palabra = random.choice(categorias[categoria])
 
-	return palabra
+		return palabra
+			
+	except Exception as e:
+		print("Error:", e)
 
 def inicializar_tablero(palabra):	
 	return ["_"] * len(palabra)
@@ -57,8 +61,12 @@ def mostrar_tablero(tablero):
 
 def pedir_letra():
 
-	letra = input("Intoduce la letra: ")
-	return letra.lower()
+	try:
+		letra = str(input("Intoduce la letra: "))
+		return letra.lower()
+	
+	except Exception as e:
+		print("Error:", e)
 
 def actualizar_tablero(palabra, tablero, letra):
 
@@ -74,26 +82,29 @@ def jugar_ahorcado():
 	intentos = 0
 	tablero = inicializar_tablero(palabra)
 
-	while "_" in tablero and intentos < intentos_maximos:
+	try:
+		while "_" in tablero and intentos < intentos_maximos:
 
-		mostrar_tablero(tablero)
-		letra = pedir_letra()
+			mostrar_tablero(tablero)
+			letra = pedir_letra()
 
-		if letra in palabra:
+			if letra in palabra:
 
-			actualizar_tablero(palabra, tablero, letra)
-			print("Correcto!")
+				actualizar_tablero(palabra, tablero, letra)
+				print("Correcto!")
 
-		else:
+			else:
+				intentos += 1
 
-			intentos += 1
+				for i in range(1, 6):
 
-			for i in range(1, 6):
+					if intentos == i:
+						print(f"Te quedan {6 - i} intentos")
 
-				if intentos == i:
-					print(f"Te quedan {6 - i} intentos")
-
-			print("Incorrecto. intentos {}/{}".format(intentos, intentos_maximos))
+				print("Incorrecto. intentos {}/{}".format(intentos, intentos_maximos))
+	
+	except Exception as e:
+		print("Error:", e)
 
 	if "_" in tablero:
 		print("Perdiste :(")

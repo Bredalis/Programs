@@ -1,5 +1,5 @@
 
-# Librerias
+# Librerías
 
 import tkinter as tk
 import sqlite3 as sqlite

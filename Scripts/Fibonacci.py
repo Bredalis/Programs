@@ -6,6 +6,3 @@ def fibonacci(numero):
 
 	else:
 		return fibonacci(numero - 1) + fibonacci(numero - 2)
-
-for i in range(10):
-	print(fibonacci(i))

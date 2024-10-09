@@ -2,14 +2,15 @@
 # Algoritmo para deducir si 
 # un año es bisiesto o no 
 
-try:
-	año = int(input("Ingrese el año: "))
+def es_bisiesto():
+	try:
+		año = int(input("Ingrese el año: "))
 
-	if año % 4 == 0:
-		print("Es un año bisiesto")
+		if año % 4 == 0:
+			return "Es un año bisiesto"
 
-	else:
-		print("No es un año bisiesto")
+		else:
+			return "No es un año bisiesto"
 
-except ValueError:
-	print("Solo numeros")
+	except ValueError:
+		return "Solo números"

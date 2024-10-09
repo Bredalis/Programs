@@ -1,7 +1,7 @@
 
 print("Clasificador de notas con valor de 100 puntos")
 
-while(True):
+def calificacion_puntuacion():
 
 	try:
 		nota = int(input("Nota: "))
@@ -15,7 +15,5 @@ while(True):
 		elif nota < 90 and nota > 70 and nota < 100:
 			print("¡Muy Bien, eres aplicado!")
 
-		break
-
 	except ValueError:
-		print("Solo Numeros")	
+		print("Solo Numeros")

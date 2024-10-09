@@ -1,5 +1,5 @@
 
-# Librerias
+# Librerías
 
 import tkinter as tk
 from PIL import Image, ImageTk
@@ -42,7 +42,6 @@ class Cerrar:
         global foto
 
         try:
-
             folder = filedialog.askopenfilename(title = "Open", initialdir = "C:", 
                 filetypes = (("Icon", "*.png"), ("Icon", "*.ico"), ("Icon", "*.jpg")))
 

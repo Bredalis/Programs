@@ -11,6 +11,3 @@ def insertion_sort(lista):
 		lista.remove(max(lista))		
 
 	return lista_ordenada
-
-lista = [5, 3, 1, 4, 2]
-print(insertion_sort(lista))
