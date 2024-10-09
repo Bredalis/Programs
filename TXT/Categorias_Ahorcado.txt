@@ -1,49 +1,41 @@
 
 comida = [
-	
 	"pizza", "ensalada", "arroz", "pasta", "sopa", "frituras", "pan", 
-	"mofongo", "azucar", "sal", "naranja", "fresas", "jugo", "helado", 
-	"menta", "limon", "coco", "pudin", "agua"
+	"mofongo", "azúcar", "sal", "naranja", "fresas", "jugo", "helado", 
+	"menta", "limón", "coco", "pudín", "agua"
 ]
 
 sentimientos = [
-
-	"felicidad", "ira", "paz", "alegria", "miedo", "amor", "llorar",
-	"simpatia", "empatia", "tolerancia", "paciencia", "rabia", "dolor", "honestidad", 
-	"odio", "desagrado", "angustia", "ansiedad", "estres"
+	"felicidad", "ira", "paz", "alegría", "miedo", "amor", "llorar",
+	"simpatía", "empatía", "tolerancia", "paciencia", "rabia", "dolor", "honestidad", 
+	"odio", "desagrado", "angustia", "ansiedad", "estrés"
 ]
 
 paises = [
-
-	"mexico", "argetina", "belice", "haiti", "japon", "canada", "francia",  
-	"china", "laos", "peru", "antigua y barbudas", "ee.uu", "reino unido", "uruguay",
+	"méxico", "argentina", "belice", "haití", "japón", "canadá", "francia",  
+	"china", "laos", "perú", "antigua y barbuda", "ee.uu.", "reino unido", "uruguay",
 	"singapur", "corea del sur", "corea del norte", "india", "brasil"
-
 ]
 
 nombres = [
-
-	"lucas", "perla", "kevin", "juanmy", "yulissa", "jonathan", "emghell"
-	"miguel", "leo", "marisol", "margarita", "pedro", "juan", "jose", 
-	"josefa", "maria", "loraine", "mozart", "matias", "joel", "steve",
+	"lucas", "perla", "kevin", "juanmy", "yulissa", "jonathan", "emghell",
+	"miguel", "leo", "marisol", "margarita", "pedro", "juan", "josé", 
+	"josefa", "maría", "loraine", "mozart", "matías", "joel", "steve",
 	"lukas", "alejandro", "alex"
 ]
 
 cosas = [
-
-	"carro", "laptop", "cama", "repisa", "silla", "mesa", "libro", "hojas", "letras", "saco"
+	"carro", "laptop", "cama", "repisa", "silla", "mesa", "libro", "hojas", "letras", "saco",
 	"botones", "platos", "cuaderno", "personajes", "radio", "tv", "celular", "vaso"
 ]
 
 animales = [
-
-	"pinguino", "oso", "cerdo", "leon", "arana", "pelicano", "cocodrillo", 
-	"serpiente", "caballo", "mono", "raton", "cien pies", "lombris", "gusano", 
-	"mariposa", "gato", "cucaracha", "pajaro", "elefante"
+	"pingüino", "oso", "cerdo", "león", "araña", "pelícano", "cocodrilo", 
+	"serpiente", "caballo", "mono", "ratón", "ciempiés", "lombriz", "gusano", 
+	"mariposa", "gato", "cucaracha", "pájaro", "elefante"
 ]
 
 artistas = [
-
 	"justin bieber", "alan walker", "maluma", "sia", "usher", "will.i.am", "beethoven", 
 	"mozart", "bts", "eminem", "rihanna", "the beatles", "lady gaga", "selena gomez",
 	"shakira", "ariana grande", "adele", "bruno mars", "michael jackson"

@@ -11,6 +11,9 @@ def binary_search(lista, numero):
 	izquierda = lista[:centro]
 	derecha = lista[centro:]
 
+	if len(lista) == 0:
+		return "Lista vacía"
+
 	if lista[centro] == numero:
 		return f"{numero} esta en el centro"
 
@@ -20,7 +23,4 @@ def binary_search(lista, numero):
 	if numero in derecha:
 		return f"{numero} esta en la derecha"
 
-	return "El numero no esta"
-
-lista = [11, 33, 5, 25, 8, 64, 90]
-print(binary_search(lista, 5))
+	return "El número no esta"

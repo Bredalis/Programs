@@ -1,7 +1,7 @@
 
 # Reproductor de musica en mp3
 
-# Librerias
+# Librerías
 
 import pygame
 import tkinter as tk
