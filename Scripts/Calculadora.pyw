@@ -102,37 +102,42 @@ def operaciones_aritmeticas(signo_operacion):
 def resultado():
 
 	global numero_2
-	
 	numero_2 = mi_entry.get()
-	numero_2 = float(numero_2)
 
-	mi_entry.delete(0, tk.END)
-
-	if operacion == "+" :
-		mi_entry.insert(0, numero_1 + numero_2)
-
-	if operacion == "-" :
-		mi_entry.insert(0, numero_1 - numero_2)
-
-	if operacion == "*" :
-		mi_entry.insert(0, numero_1 * numero_2)
-
-	if operacion == "^" :
-		mi_entry.insert(0, numero_1 ** numero_2)
-
-	if operacion == "B":
-		mi_entry.insert(0, bin(numero_1)[2:])
-
-	if operacion == "/":
-
+	if operacion == "B":  # Operación binaria
 		try:
-			mi_entry.insert(0, numero_1 / numero_2)
+			numero_binario = bin(int(numero_1))[2:]  # Convertir a binario
+			mi_entry.delete(0, tk.END)
+			mi_entry.insert(0, numero_binario)
+        
+		except ValueError:
+		    mi_entry.delete(0, tk.END)
+		    mi_entry.insert(0, "Error")
+	
+	else:
+		try:
+		    numero_2 = float(numero_2)
+		    if operacion == "+":
+		        resultado = numero_1 + numero_2
+		    
+		    elif operacion == "-":
+		        resultado = numero_1 - numero_2
+		    
+		    elif operacion == "*":
+		        resultado = numero_1 * numero_2
+		    
+		    elif operacion == "/":
+		        if numero_2 == 0:
+		            resultado = "Error"
+		        else:
+		            resultado = numero_1 / numero_2
 
-		except ZeroDivisionError:
+		    mi_entry.delete(0, tk.END)
+		    mi_entry.insert(0, str(resultado))
+        
+		except ValueError:
+			mi_entry.delete(0, tk.END)
 			mi_entry.insert(0, "Error")
-
-	if operacion == "√":
-		mi_entry.insert(0, math.sqrt(numero_1))
 
 condicion = True
 texto = tk.IntVar().set("")

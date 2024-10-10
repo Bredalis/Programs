@@ -2,30 +2,23 @@
 # Librerías
 
 import pandas as pd
-import sqlite3 as sqlite
 import matplotlib.pyplot as plt
 
-# Conectar a BBDD
+# Conectar con el dataset
 
-bbdd_presupuesto = sqlite.connect("../BBDD/Presupuesto.db")
+presupuesto_mensual = pd.read_csv("../BBDD/Presupuesto_Mensual.csv")
+print(presupuesto_mensual)
 
-# Obtener todas las columnas de las tablas
+# Función para mostrar las distintas gráficas
 
-presupuesto = pd.read_sql("SELECT MONTH, SPENDING, INCOME FROM Monthly", bbdd_presupuesto)
-print(f"Presupuesto: \n{presupuesto}")
+def graficar_datos(y, titulo):
 
-# Mostrar gastos mensuales
-
-def gastos():
-
-	plt.bar(presupuesto.MONTH, presupuesto.SPENDING, color = "pink")
-	plt.title("Gastos")
+	plt.bar(presupuesto_mensual.MES, presupuesto_mensual[y], color = "pink")
+	plt.title(titulo + y)
 	plt.show()
 
-# Mostrar presupuesto mensual
+# Mostrar las gráficas
 
-gastos()
-
-plt.bar(presupuesto.MONTH, presupuesto.INCOME, color = "pink")
-plt.title("Presupuesto Mensual (Ingresos)")
-plt.show()
+graficar_datos("INGRESOS", "Presupuesto Mensual - ")
+graficar_datos("GASTOS", "Presupuesto Mensual - ")
+graficar_datos("TOTAL INGRESOS", "Presupuesto Mensual - ")

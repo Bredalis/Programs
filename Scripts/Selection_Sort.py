@@ -8,11 +8,11 @@ def selection_sort(lista):
 
 	global lista_ordenada
 
+	if not type(lista) == list:
+		return None
+
 	for i in range(len(lista)):
 		lista_ordenada.append(min(lista))
 		lista.remove(min(lista))
 		
-	print(lista_ordenada)
-	
-lista = [5, 3, 1, 4, 2]
-selection_sort(lista)
+	return lista_ordenada
