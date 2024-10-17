@@ -5,6 +5,9 @@
 <a href="https://www.pythonguis.com/installation/install-tkinter-windows/" target="_blank">
   <img src="https://img.shields.io/badge/Tkinter-ECF0F1">
 </a>
+<a href="https://sqlitebrowser.org/" target="_blank"> 
+  <img src="https://img.shields.io/badge/SQLite-3498DB">
+</a>
 <a href="https://matplotlib.org/stable/install/index.html" target="_blank">
   <img src="https://img.shields.io/badge/Matplotlib-E74C3C">
 </a>
@@ -14,22 +17,32 @@
 <a href="https://www.tensorflow.org/install?hl=es-419" target="_blank">
   <img src="https://img.shields.io/badge/TensorFlow-F39C12">
 </a>
+<a href="https://lenguajecss.com/" target="_blank">
+  <img src="https://img.shields.io/badge/CSS-3498DB">  
+</a>
+<a href="https://lenguajehtml.com/" target="_blank"> 
+  <img src="https://img.shields.io/badge/HTML-E74C3C">
+</a>
+<a href="https://lenguajejs.com/" target="_blank">
+  <img src="https://img.shields.io/badge/JavaScript-F7DC6F">
+</a>
 <br><br>
 
 <img src="https://i.pinimg.com/236x/a8/53/14/a8531424a5fac660e4261f72ca817141.jpg" width="60%">
 
 <p>
-  Este repositorio contiene una colección de programas simples escritos en Python. 
-  Cada programa está diseñado para demostrar conceptos básicos y un poco avanzados de Python de manera clara y concisa.
+  Este repositorio contiene una colección de programas simples escritos en Python . Cada programa está diseñado para demostrar 
+  conceptos básicos y un poco avanzados de Python de manera clara y concisa. 💻 Es ideal para principiantes y estudiantes intermedios 
+  que deseen reforzar su comprensión de Python. a través de ejemplos prácticos.
 </p>
 
 ## Índice de Contenidos 🧾
 
-- [Descripción](#descripción) 📝
-- [Instalación](#instalación) 🛠️
-- [Uso](#uso) 📘
-- [Programas Incluidos](#programas-incluidos) 📂
-- [Licencia](#licencia)📜
+- Descripción 📝
+- Instalación 🛠️
+- Uso 📘
+- Programas Incluidos 📂
+- Licencia📜
 
 ## Instalación 🖥️
 
