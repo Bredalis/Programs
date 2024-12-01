@@ -1,0 +1,14 @@
+
+Bienvenido al Juego del Ahorcado
+
+Hola, bienvenido al juego del ahorcado, donde tú, como usuario, 
+tendrás que introducir letras que serán evaluadas por el ordenador 
+para determinar si has acertado y ganado.
+
+Este programa cuenta con 7 categorías de temas, y tendrás solo seis 
+oportunidades. Según las reglas originales del juego, cada vez que 
+falles, se irá dibujando el personaje ahorcado, y tus oportunidades disminuirán. 
+Si no fallas, estarás más cerca de ganar. ¡Suerte!
+
+Este manual asume que sabes cómo se juega. De lo contrario, te recomendamos ver 
+un tutorial.

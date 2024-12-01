@@ -1,0 +1,7 @@
+
+Manual del Programa "Abrir_Imagen.py"
+
+Este manual trata sobre el programa llamado Abrir_Imagen.py. 
+El programa está diseñado para abrir imágenes, como su 
+nombre lo indica. Permite visualizar todo tipo de imágenes, y 
+puede hacerse cuantas veces desee el usuario.

@@ -1,0 +1,16 @@
+
+import tkinter as tk
+
+def manual(Archivo, icono = None, color = None):
+	descargar_datos = open(Archivo, "r", encoding = "utf-8")
+	contenido = descargar_datos.read()
+	descargar_datos.close()
+
+	ventana = tk.Tk()
+	ventana.title("Manual Instructivo")
+	ventana.resizable(0,0)
+	ventana.config(bg = color)
+	ventana.iconbitmap(icono)
+
+	tk.Label(ventana, text = contenido, bg = color).pack()
+	ventana.mainloop()
