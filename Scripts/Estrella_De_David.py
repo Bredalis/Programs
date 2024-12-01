@@ -16,7 +16,10 @@ crear_lineas([7, 5], [7, 4])
 crear_lineas([5, 7], [4, 3])
 crear_lineas([5, 3], [4, 3])
 
+<<<<<<< HEAD
 # Rangos para los ejes
+=======
+>>>>>>> 0ef5f1e9e18af325cc084fe05193bb4d49bdf2da
 grafica.set_yticks(range(1, 11))
 grafica.set_xticks(range(1, 11))
 

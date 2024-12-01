@@ -4,8 +4,15 @@ import sqlite3 as sqlite
 from math import floor
 
 url = "../IMG/Salud_Fisica.ico"
+<<<<<<< HEAD
 contenido = open("../TXT/Manual.txt").read()
 exec(contenido)
+=======
+
+contenido = open("../TXT/Manual.txt").read()
+exec(contenido)
+
+>>>>>>> 0ef5f1e9e18af325cc084fe05193bb4d49bdf2da
 manual("../TXT/Manual_IMC.txt", url)
 
 ventana = tk.Tk()
@@ -28,6 +35,10 @@ def conectar_bbdd():
 booleano = True
 
 def imc():
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0ef5f1e9e18af325cc084fe05193bb4d49bdf2da
 	global booleano
 
 	resultado = floor(peso.get() / (altura.get() * altura.get()))
@@ -55,13 +66,22 @@ def imc():
 		etiqueta_resultado.config(text = "")		
 		booleano = True
 
+<<<<<<< HEAD
 # Elementos de la ventana
+=======
+# Elementos de la interfaz
+
+>>>>>>> 0ef5f1e9e18af325cc084fe05193bb4d49bdf2da
 nombre = tk.StringVar()
 peso = tk.IntVar()
 altura = tk.IntVar()
 
+<<<<<<< HEAD
 tk.Label(ventana, text = "Datos Para Determinar\n Su Salud Física", bg = "#D6EAF8", 
 	font = ("Comic Sans MS", 16)).pack(pady = 50)
+=======
+tk.Label(ventana, text = "Datos Para Determinar \n Su Salud Física", bg = "#D6EAF8", font = ("Comic Sans MS", 16)).pack(pady = 50)
+>>>>>>> 0ef5f1e9e18af325cc084fe05193bb4d49bdf2da
 
 tk.Label(ventana, text = "Nombre:", bg = "#D6EAF8", font = ("Comic Sans MS", 16)).pack()
 entry_nombre = tk.Entry(ventana, textvariable = nombre)
