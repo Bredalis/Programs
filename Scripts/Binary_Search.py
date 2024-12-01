@@ -1,15 +1,10 @@
 
-<<<<<<< HEAD
 # Algoritmo para encontrar 
-=======
-# Es un algoritmo eficiente para encontrar 
->>>>>>> 0ef5f1e9e18af325cc084fe05193bb4d49bdf2da
 # un elemento en una lista ordenada
 
 def binary_search(lista, numero):
 
 	# Posiciones de la lista
-	
 	lista.sort()
 	centro = len(lista) // 2
 	izquierda = lista[:centro]

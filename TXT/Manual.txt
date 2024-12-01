@@ -2,10 +2,6 @@
 import tkinter as tk
 
 def manual(Archivo, icono = None, color = None):
-<<<<<<< HEAD
-=======
-
->>>>>>> 0ef5f1e9e18af325cc084fe05193bb4d49bdf2da
 	descargar_datos = open(Archivo, "r", encoding = "utf-8")
 	contenido = descargar_datos.read()
 	descargar_datos.close()
@@ -14,15 +10,7 @@ def manual(Archivo, icono = None, color = None):
 	ventana.title("Manual Instructivo")
 	ventana.resizable(0,0)
 	ventana.config(bg = color)
-<<<<<<< HEAD
 	ventana.iconbitmap(icono)
 
 	tk.Label(ventana, text = contenido, bg = color).pack()
-=======
-
-	ventana.iconbitmap(icono)
-
-	tk.Label(ventana, text = contenido, bg = color).pack()
-
->>>>>>> 0ef5f1e9e18af325cc084fe05193bb4d49bdf2da
 	ventana.mainloop()

@@ -1,6 +1,5 @@
 
 comida = [
-<<<<<<< HEAD
     "pizza", "ensalada", "arroz", "pasta", "sopa", "frituras", "pan", 
     "mofongo", "azúcar", "sal", "naranja", "fresas", "jugo", "helado", 
     "menta", "limón", "coco", "pudín", "agua"
@@ -40,45 +39,4 @@ artistas = [
     "justin bieber", "alan walker", "maluma", "sia", "usher", "will.i.am", "beethoven", 
     "mozart", "bts", "eminem", "rihanna", "the beatles", "lady gaga", "selena gomez",
     "shakira", "ariana grande", "adele", "bruno mars", "michael jackson"
-=======
-	"pizza", "ensalada", "arroz", "pasta", "sopa", "frituras", "pan", 
-	"mofongo", "azúcar", "sal", "naranja", "fresas", "jugo", "helado", 
-	"menta", "limón", "coco", "pudín", "agua"
-]
-
-sentimientos = [
-	"felicidad", "ira", "paz", "alegría", "miedo", "amor", "llorar",
-	"simpatía", "empatía", "tolerancia", "paciencia", "rabia", "dolor", "honestidad", 
-	"odio", "desagrado", "angustia", "ansiedad", "estrés"
-]
-
-paises = [
-	"méxico", "argentina", "belice", "haití", "japón", "canadá", "francia",  
-	"china", "laos", "perú", "antigua y barbuda", "ee.uu.", "reino unido", "uruguay",
-	"singapur", "corea del sur", "corea del norte", "india", "brasil"
-]
-
-nombres = [
-	"lucas", "perla", "kevin", "juanmy", "yulissa", "jonathan", "emghell",
-	"miguel", "leo", "marisol", "margarita", "pedro", "juan", "josé", 
-	"josefa", "maría", "loraine", "mozart", "matías", "joel", "steve",
-	"lukas", "alejandro", "alex"
-]
-
-cosas = [
-	"carro", "laptop", "cama", "repisa", "silla", "mesa", "libro", "hojas", "letras", "saco",
-	"botones", "platos", "cuaderno", "personajes", "radio", "tv", "celular", "vaso"
-]
-
-animales = [
-	"pingüino", "oso", "cerdo", "león", "araña", "pelícano", "cocodrilo", 
-	"serpiente", "caballo", "mono", "ratón", "ciempiés", "lombriz", "gusano", 
-	"mariposa", "gato", "cucaracha", "pájaro", "elefante"
-]
-
-artistas = [
-	"justin bieber", "alan walker", "maluma", "sia", "usher", "will.i.am", "beethoven", 
-	"mozart", "bts", "eminem", "rihanna", "the beatles", "lady gaga", "selena gomez",
-	"shakira", "ariana grande", "adele", "bruno mars", "michael jackson"
->>>>>>> 0ef5f1e9e18af325cc084fe05193bb4d49bdf2da
 ]

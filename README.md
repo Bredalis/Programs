@@ -82,7 +82,7 @@ Lista y descripción breve de cada uno de los programas incluidos en este reposi
 
 - 🧮 <a href="https://github.com/Bredalis/Programs/blob/master/Calculadora.pyw" target="_blank">Calculadora.pyw</a>: Es una calculadora simple hecha con Tkinter, la cual realiza los siguientes operaciones: (Suma, resta, multiplicación, división, potencia, raíz cuadrada, conversión binaria y tiene el numero PI).
 
-- 🔒 <a href="https://github.com/Bredalis/Programs/blob/master/Cifrado_De_Texto.py" target="_blank">Cifrado_De_Texto.py</a>: Interfaz que cifra y decifra texto. La forma de cifrarlo es poniendo el texto en (*).
+- 🔒 <a href="https://github.com/Bredalis/Programs/blob/master/Cifrado_De_Texto.py" target="_blank">Cifrado_De_Texto.py</a>: Interfaz que cifra y decifra texto.
 
 - 📓 <a href="https://github.com/Bredalis/Programs/blob/master/Clasificacion_De_Calificacion.py" target="_blank">Clasificacion_De_Calificacion.py</a>: Algoritmo que clasifica que tan buenas son tus notas/calificaciones.
 
