@@ -18,7 +18,7 @@ class TestCifradoDeTexto(unittest.TestCase):
         self.app.booleano = True  
         # Configurar texto de prueba
         self.app.caja_texto.set("Hola, Mundo")
-        self.app.cifrar_decifrar()
+        self.app.cifrar_descifrar()
         self.assertEqual(self.app.entry_texto.get(), "***********")
 
     def test_descifrar(self):
@@ -27,7 +27,7 @@ class TestCifradoDeTexto(unittest.TestCase):
         # Configurar texto de prueba
         self.app.lista_contenidos.append("Hola, Mundo")
         self.app.caja_texto.set("***********")
-        self.app.cifrar_decifrar()
+        self.app.cifrar_descifrar()
         self.assertEqual(self.app.entry_texto.get(), "Hola, Mundo")
 
 if __name__ == "__main__":

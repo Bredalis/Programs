@@ -21,10 +21,10 @@ class CifradoDeTexto:
         self.entry_texto.pack(pady = 25)
 
         self.boton = tk.Button(self.ventana, text = "Cifrar", font = ("Times", 12, "italic"),
-                               cursor = "hand2", width = 10, command = self.cifrar_decifrar)
+                               cursor = "hand2", width = 10, command = self.cifrar_descifrar)
         self.boton.place(x = 225, y = 100)
 
-    def cifrar_decifrar(self):
+    def cifrar_descifrar(self):
         if self.booleano:
             cifrado = len(self.caja_texto.get()) * "*"
             if "*" not in self.caja_texto.get():
