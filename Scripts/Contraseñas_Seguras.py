@@ -8,7 +8,7 @@ class ClavesSeguras:
 		self.cursor = self.bbdd.cursor()
 
 	def ejecucion(self):
-		self.cursor.execute("SELECT Entidad, Claves FROM  Claves_Seguras")
+		self.cursor.execute("SELECT Entidad, Claves FROM Claves_Seguras")
 
 	def crear_df(self):
 		self.datos = self.cursor.fetchall()
