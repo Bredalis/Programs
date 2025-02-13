@@ -9,7 +9,7 @@ def claves_seguras(longitud: int):
 			return "Longitud mínima 8 y máxima 128."
 
 		clave = Faker().password(length = longitud)
-		print(f"Tu contraseña segura: {clave}")
+		return f"Tu contraseña segura:", clave 
 	
 	except Exception as e:
 		return f"Error inesperado: {e}"
